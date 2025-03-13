@@ -44,7 +44,7 @@
                             Our Service
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Smart Spots</a></li>
+                            <li><a class="dropdown-item" href="/Smartsport.html">Smart Spots</a></li>
                             <li><a class="dropdown-item" href="#">Booking</a></li>
                             <li><a class="dropdown-item" href="#">Addon</a></li>
                             <li><a class="dropdown-item" href="#">EV Recharge</a></li>
@@ -71,8 +71,8 @@
                 <h4>Divakar Sharma</h4>
             </div>
             <ul class="nav flex-column">
-                <li class="nav-item"><a href="http://localhost:8080/users/new" class="nav-link"><i class="fas fa-user-edit"></i> Update Profile</a></li>
-                <li class="nav-item"><a href="http://localhost:8080/vehicles/new" class="nav-link"><i class="fas fa-car"></i> Add Vehicle</a></li>
+                <li class="nav-item"><a href="#" class="nav-link update-profile-btn"><i class="fas fa-user-edit"></i> Update Profile</a></li>
+                <li class="nav-item"><a href="#" class="nav-link add-vehicle-btn"><i class="fas fa-car"></i> Add Vehicle</a></li>
                 <li class="nav-item"><a href="#" class="nav-link"><i class="fas fa-history"></i> Booking History</a></li>
                 <li class="nav-item"><a href="#" class="nav-link"><i class="fas fa-calendar-check"></i> Current Booking</a></li>
             </ul>
@@ -153,5 +153,172 @@
 
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Modal1 Structure -->
+<div class="modal1" id="userModal">
+    <div class="modal1-content">
+        <!-- Modal Header -->
+        <div class="modal1-header">
+            <h2>User Info</h2>
+            <span class="modal1-close">x</span>
+        </div>
+
+        <!-- Profile Section -->
+        <div class="modal1-profile-section">
+            <img id="profilePreview" src="default-profile.png" alt="Profile Picture">
+            <br>
+            <input type="file" id="profileUpload" accept="image/*">
+        </div>
+
+        <!-- Form Section -->
+        <div class="modal1-form-card">
+            <form th:action="@{/users/save}" th:object="${user}" method="post" enctype="multipart/form-data">
+                <input type="hidden" th:field="*{userId}">
+
+                <div class="modal1-form-group">
+                    <label>Date of Registration</label>
+                    <input type="date" th:field="*{dateOfRegister}" required min="1900-01-01" max="2025-12-31">
+                </div>
+
+                <div class="modal1-form-group">
+                    <label>First Name</label>
+                    <input type="text" th:field="*{firstName}" required placeholder="e.g Divakar">
+                </div>
+
+                <div class="modal1-form-group">
+                    <label>Last Name</label>
+                    <input type="text" th:field="*{lastName}" required placeholder="e.g Sharma">
+                </div>
+
+                <div class="modal1-form-group">
+                    <label>Date of Birth</label>
+                    <input type="date" th:field="*{dob}" required min="1900-01-01" max="2025-12-31">
+                </div>
+
+                <div class="modal1-form-group">
+                    <label>Email</label>
+                    <input type="email" th:field="*{email}" class="form-control" required placeholder="e.g: divakar.sharma@example.com">
+                    <div class="error" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></div>
+                </div>
+
+                <div class="modal1-form-group">
+                    <label>Contact Number</label>
+                    <input type="tel" th:field="*{contactNumber}" class="form-control" required pattern="\+91[6-9][0-9]{9}" placeholder="e.g: +919876543210">
+                    <div class="error" th:if="${#fields.hasErrors('contactNumber')}" th:errors="*{contactNumber}"></div>
+                </div>
+
+                <div class="modal1-form-group">
+                    <label>User Type</label>
+                    <select th:field="*{userType}">
+                        <option value="VEHICLE_OWNER">Vehicle Owner</option>
+                        <option value="SLOT_OWNER">Slot Owner</option>
+                    </select>
+                </div>
+
+                <div class="modal1-form-group">
+                    <label>Address</label>
+                    <textarea th:field="*{address}" class="form-control" rows="3" required placeholder="Street, City, State, ZIP"></textarea>
+                </div>
+
+                <div class="modal1-form-group">
+                    <label>Status</label>
+                    <select th:field="*{status}">
+                        <option value="ACTIVE">Active</option>
+                        <option value="INACTIVE">Inactive</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+
+        <!-- Modal Footer -->
+        <div class="modal1-footer">
+            <button type="submit" class="btn modal1-btn-submit">Save</button>
+        </div>
+    </div>
+</div>
+
+<!-- model2 vehicle -->
+<div class="modal2" id="vehicleModal">
+    <div class="modal2-content">
+        <!-- Modal Header -->
+        <div class="modal2-header">
+            <h2>Add Vehicle</h2>
+            <span class="modal2-close">x</span>
+        </div>
+
+        <!-- Profile Section -->
+        <div class="modal2-profile-section">
+            <img id="VehiclePreview" src="default-profile.png" alt="Vehicle Picture">
+            <br>
+            <input type="file" id="vehicleUpload" accept="image/*">
+        </div>
+
+        <!-- Form Section -->
+        <div class="modal2-form-card">
+            <form th:action="@{/vehicles/save}" th:object="${vehicle}" method="post">
+                <input type="hidden" th:field="*{vehicleId}">
+
+                <div class="modal2-form-group">
+                    <label>Registration Number</label>
+                    <input type="text" th:field="*{registrationNumber}" required placeholder="e.g MH12AB1234">
+                </div>
+
+                <div class="modal2-form-group">
+                    <label>Vehicle Type</label>
+                        <select th:field="*{vehicleType}">
+                            <option value="CAR">Car</option>
+                            <option value="BIKE">Bike</option>
+                            <option value="TRUCK">Truck</option>
+                            <option value="OTHER">Other</option>
+                        </select>
+                </div>
+
+                <div class="modal2-form-group">
+                    <label>Brand</label>
+                        <input type="text" th:field="*{brand}" required placeholder="e.g. Toyota, Honda">
+                </div>
+
+                <div class="modal2-form-group">
+                    <label>Model</label>
+                    <input type="text" th:field="*{model}" required placeholder="e.g. Fortuner, Civic">
+                </div>
+
+                <div class="modal2-form-group">
+                    <label>Registration Date</label>
+                        <input type="date" th:field="*{registrationDate}" required min="1900-01-01" max="2025-12-31">
+                </div>
+
+                <div class="modal2-form-group">
+                    <label>Status</label>
+                    <select th:field="*{status}">
+                        <option value="ACTIVE">Active</option>
+                        <option value="INACTIVE">Inactive</option>
+                    </select>
+                </div>
+
+                <div class="modal2-form-group">
+                    <label>User Type</label>
+                    <select th:field="*{userType}">
+                        <option value="VEHICLE_OWNER">Vehicle Owner</option>
+                        <option value="SLOT_OWNER">Slot Owner</option>
+                    </select>
+                </div>
+
+                <div class="modal2-form-group">
+                    <label>Owner (User)</label>
+                        <select th:field="*{userObj}" required>
+                            <option th:each="user : ${users}" th:value="${user.userId}" th:text="${user.firstName + ' ' + user.lastName}"></option>
+                        </select>
+                </div>
+            </form>
+        </div>
+
+        <!-- Modal Footer -->
+        <div class="modal2-footer">
+            <button type="submit" class="btn modal2-btn-submit">Save</button>
+        </div>
+    </div>
+</div>
+<!-- model2 vehicle -->
+
 </body>
 </html>

@@ -115,3 +115,301 @@ body {
     color: #e4405f !important;
 }
 
+
+/* Model1 css */
+/* Unique Modal Container */
+.modal1-body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Modal Background */
+.modal1 {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(245, 237, 237, 0.051);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal Content */
+.modal1-content {
+    background-color: #bcc0c2;
+    width: 90%;
+    max-width: 500px;
+    height: 90%;
+    max-height: 650px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 3px 0px #080707e8;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Modal Header */
+.modal1-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: linear-gradient(to left, #616161, #6d6d6d, #7d7d7d, #555555, #474747);
+}
+
+.modal1-header h2 {
+    color: white;
+    font-size: 20px;
+    margin: 0;
+}
+
+.modal1-close {
+    font-size: 20px;
+    cursor: pointer;
+    color: red;
+    transition: color 0.3s;
+}
+
+.modal1-close:hover {
+    color: white;
+}
+
+/* Profile Section */
+.modal1-profile-section {
+    text-align: center;
+    margin-bottom: 10px;
+    padding-top: 5px;
+    background-color: #bcc0c2;
+}
+
+.modal1-profile-section img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.modal1-profile-section input {
+    margin-top: 10px;
+}
+
+/* Scrollable Form */
+.modal1-form-card {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 10px;
+    background-color: #bcc0c2;
+}
+
+/* Scrollbar Styling */
+.modal1 * {
+    scrollbar-width: thin;
+    scrollbar-color: #ddd transparent;
+}
+
+.modal1 *::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal1 *::-webkit-scrollbar-thumb {
+    border-radius: 99px;
+    background-color: #ddd;
+}
+
+/* Form Styling */
+.modal1-form-group {
+    width: 90%;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal1-form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: black;
+}
+
+.modal1-form-group input,
+.modal1-form-group select,
+.modal1-form-group textarea {
+    padding: 8px;
+    border: 1px solid #03080b;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #bcc0c2;
+}
+
+/* Modal Footer */
+.modal1-footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    background: linear-gradient(to left, #616161, #6d6d6d, #7d7d7d, #555555, #474747);
+}
+
+.modal1-btn-submit {
+    background-color: #32CD32;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+/* Model1 css */
+
+/* Model2 css */
+.modal2-body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Modal Background */
+.modal2 {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(245, 237, 237, 0.051);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal Content */
+.modal2-content {
+    background-color: #bcc0c2;
+    width: 90%;
+    max-width: 500px;
+    height: 90%;
+    max-height: 650px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 3px 0px #080707e8;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Modal Header */
+.modal2-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: linear-gradient(to left, #616161, #6d6d6d, #7d7d7d, #555555, #474747);
+}
+
+.modal2-header h2 {
+    color: white;
+    font-size: 20px;
+    margin: 0;
+}
+
+.modal2-close {
+    font-size: 20px;
+    cursor: pointer;
+    color: red;
+    transition: color 0.3s;
+}
+
+.modal2-close:hover {
+    color: white;
+}
+
+/* Profile Section */
+.modal2-profile-section {
+    text-align: center;
+    margin-bottom: 10px;
+    padding-top: 5px;
+    background-color: #bcc0c2;
+}
+
+.modal2-profile-section img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.modal2-profile-section input {
+    margin-top: 10px;
+}
+
+/* Scrollable Form */
+.modal2-form-card {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 10px;
+    background-color: #bcc0c2;
+}
+
+/* Scrollbar Styling */
+.modal2 * {
+    scrollbar-width: thin;
+    scrollbar-color: #ddd transparent;
+}
+
+.modal2 *::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal2 *::-webkit-scrollbar-thumb {
+    border-radius: 99px;
+    background-color: #ddd;
+}
+
+/* Form Styling */
+.modal2-form-group {
+    width: 90%;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal2-form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: black;
+}
+
+.modal2-form-group input,
+.modal2-form-group select,
+.modal2-form-group textarea {
+    padding: 8px;
+    border: 1px solid #03080b;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #bcc0c2;
+}
+
+/* Modal Footer */
+.modal2-footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    background: linear-gradient(to left, #616161, #6d6d6d, #7d7d7d, #555555, #474747);
+}
+
+.modal2-btn-submit {
+    background-color: #32CD32;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Model2 css */
