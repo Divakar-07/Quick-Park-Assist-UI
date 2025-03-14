@@ -55,3 +55,58 @@ function mobileToggleForm() {
         signup.style.display = 'block';
     }
 }
+
+//test
+document.addEventListener("DOMContentLoaded", function () {
+    // Function to handle modal opening and closing
+    function setupModal(modalId, buttonClass, closeClass) {
+        const modal = document.getElementById(modalId);
+        const openBtn = document.querySelector(`.${buttonClass}`);
+        const closeBtns = document.querySelectorAll(`.${closeClass}`);
+
+        if (openBtn) { 
+            openBtn.addEventListener("click", function () {
+                modal.style.display = "flex";
+            });
+        }
+
+        closeBtns.forEach(btn => {
+            btn.addEventListener("click", function () {
+                modal.style.display = "none";
+            });
+        });
+
+        window.addEventListener("click", function (event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+    }
+
+    // Function to handle image preview
+    function setupImagePreview(inputId, previewId) {
+        const input = document.getElementById(inputId);
+        const preview = document.getElementById(previewId);
+
+        if (input && preview) {
+            input.addEventListener("change", function (event) {
+                const file = event.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function (e) {
+                        preview.src = e.target.result;
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+        }
+    }
+
+    // Set up modals
+    setupModal("userModal", "update-profile-btn", "modal1-close");
+    setupModal("vehicleModal", "add-vehicle-btn", "modal2-close");
+
+    // Set up image previews
+    setupImagePreview("profileUpload", "profilePreview");
+    setupImagePreview("vehicleUpload", "VehiclePreview");
+});
