@@ -117,7 +117,6 @@ body {
 
 
 /* Model1 css */
-/* Unique Modal Container */
 .modal1-body {
     font-family: Arial, sans-serif;
     display: flex;
@@ -142,7 +141,7 @@ body {
 
 /* Modal Content */
 .modal1-content {
-    background-color: #bcc0c2;
+    background-color: #A4C1CA;
     width: 90%;
     max-width: 500px;
     height: 90%;
@@ -161,7 +160,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    background: linear-gradient(to left, #616161, #6d6d6d, #7d7d7d, #555555, #474747);
+    background: linear-gradient(to right, #1FA3D4, #86C7E2, #206F91, #5B879F, #A4C1CA);
 }
 
 .modal1-header h2 {
@@ -186,7 +185,7 @@ body {
     text-align: center;
     margin-bottom: 10px;
     padding-top: 5px;
-    background-color: #bcc0c2;
+    background-color: #A4C1CA;
 }
 
 .modal1-profile-section img {
@@ -205,7 +204,7 @@ body {
     flex-grow: 1;
     overflow-y: auto;
     padding: 10px;
-    background-color: #bcc0c2;
+    background-color: #A4C1CA;
 }
 
 /* Scrollbar Styling */
@@ -244,7 +243,7 @@ body {
     border: 1px solid #03080b;
     border-radius: 5px;
     font-size: 14px;
-    background-color: #bcc0c2;
+    background-color: #A4C1CA;
 }
 
 /* Modal Footer */
@@ -252,7 +251,7 @@ body {
     display: flex;
     justify-content: space-around;
     padding: 10px;
-    background: linear-gradient(to left, #616161, #6d6d6d, #7d7d7d, #555555, #474747);
+    background: linear-gradient(to left, #1FA3D4, #86C7E2, #206F91, #5B879F, #A4C1CA);
 }
 
 .modal1-btn-submit {
@@ -290,7 +289,7 @@ body {
 
 /* Modal Content */
 .modal2-content {
-    background-color: #bcc0c2;
+    background-color: #A4C1CA;
     width: 90%;
     max-width: 500px;
     height: 90%;
@@ -309,7 +308,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    background: linear-gradient(to left, #616161, #6d6d6d, #7d7d7d, #555555, #474747);
+    background: linear-gradient(to right, #1FA3D4, #86C7E2, #206F91, #5B879F, #A4C1CA);
 }
 
 .modal2-header h2 {
@@ -334,7 +333,7 @@ body {
     text-align: center;
     margin-bottom: 10px;
     padding-top: 5px;
-    background-color: #bcc0c2;
+    background-color: #A4C1CA;
 }
 
 .modal2-profile-section img {
@@ -353,7 +352,7 @@ body {
     flex-grow: 1;
     overflow-y: auto;
     padding: 10px;
-    background-color: #bcc0c2;
+    background-color: #A4C1CA;
 }
 
 /* Scrollbar Styling */
@@ -392,7 +391,7 @@ body {
     border: 1px solid #03080b;
     border-radius: 5px;
     font-size: 14px;
-    background-color: #bcc0c2;
+    background-color: #A4C1CA;
 }
 
 /* Modal Footer */
@@ -400,7 +399,7 @@ body {
     display: flex;
     justify-content: space-around;
     padding: 10px;
-    background: linear-gradient(to left, #616161, #6d6d6d, #7d7d7d, #555555, #474747);
+    background: linear-gradient(to left, #1FA3D4, #86C7E2, #206F91, #5B879F, #A4C1CA);
 }
 
 .modal2-btn-submit {
@@ -411,5 +410,5 @@ body {
     cursor: pointer;
     border-radius: 5px;
 }
-
 /* Model2 css */
+

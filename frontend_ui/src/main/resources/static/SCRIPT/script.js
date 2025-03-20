@@ -34,13 +34,24 @@ function signIn(event) {
     const password = event.target[1].value;
     const user = JSON.parse(localStorage.getItem('user'));
     
-    if(user && user.email === email && user.password === password) {
+    if (user && user.email === email && user.password === password) {
         alert('Login successful!');
-        window.location.href = "/userdashboard.html"; // Redirect to dashboard
+        localStorage.setItem("loggedInUser", user.name);  
+        window.location.href = "/userdashboard"; 
     } else {
         alert('Invalid credentials!');
     }
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    const profileName = document.getElementById("userName");  
+    const loggedInUser = localStorage.getItem("loggedInUser"); 
+
+    if (profileName && loggedInUser) {
+        profileName.textContent = loggedInUser; 
+    }
+});
+
 
 // Add this mobile-specific toggle function
 function mobileToggleForm() {

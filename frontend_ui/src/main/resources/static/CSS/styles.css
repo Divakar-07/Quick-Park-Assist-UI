@@ -1,8 +1,13 @@
 /* Full-page static background */
 body {
-    background: url('/assets/images/death-valley-3133502_1280.jpg') no-repeat center center fixed;
+    background: url('/Images/death-valley-3133502_1280.jpg') no-repeat center center fixed;
     background-size: 1580px 853px;
     background-color: #f8f9fa;
+}
+
+.nav-link:hover {
+    background: #1CA7EC;
+    border-radius: 5px;
 }
 
 .transparent-box {
@@ -31,11 +36,6 @@ body {
     text-align: left;
     line-height: 1.4;
 
-}
-
-.nav-link:hover {
-    background: #1CA7EC;
-    border-radius: 5px;
 }
 
 /* Image styling */

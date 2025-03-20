@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SMART PARK</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/favicon_io/site.webmanifest">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/CSS/userstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    
+
+</head>
+<body>
+
+<div class="content-container">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-md navbar-light bg-light bg-opacity-75">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="/index">
+                <img src="/images/download (5).png" alt="Logo" width="150">
+            </a>
+
+            <!-- Navbar Toggler -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <!-- Dropdown Menu -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#Service" id="servicesDropdown" role="button" data-bs-toggle="dropdown">
+                            Our Service
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/Smartsport.html">Smart Spots</a></li>
+                            <li><a class="dropdown-item" href="#">Booking</a></li>
+                            <li><a class="dropdown-item" href="#">Addon</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Get Started Button -->
+            <a href="#" class="btn btn-primary d-none d-md-inline-block"><i class="fas fa-user"></i></a>
+        </div>
+    </nav>
+
+<!-- dashboard -->
+<div class="container-fluid">
+    <div class="row">
+        <!-- Left Sidebar (Profile & Options) -->
+        <div class="col-md-3 sidebar">
+            <div class="profile-section text-center">
+                <img src="/images/anime-male-avatar_950633-896.avif" alt="User Avatar" class="profile-img">
+                <h4 id="userName">User Name</h4>
+            </div>
+            <ul class="nav flex-column">
+                <li class="nav-item"><a href="#" class="nav-link update-profile-btn"><i class="fas fa-user-edit"></i> Update Profile</a></li>
+                <li class="nav-item"><a href="#" class="nav-link add-vehicle-btn"><i class="fas fa-car"></i> Add Vehicle</a></li>
+                <li class="nav-item"><a href="#" class="nav-link"><i class="fas fa-history"></i> Booking History</a></li>
+                <li class="nav-item"><a href="#" class="nav-link"><i class="fas fa-calendar-check"></i> Current Booking</a></li>
+            </ul>
+        </div>
+
+        <!-- Right Content (Booking Details) -->
+        <div class="col-md-9 main-content">
+            <h2 class="dashboard-title">Dashboard</h2>
+            <div class="booking-section">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="booking-card">
+                            <h4>Booking History</h4>
+                            <p>View your past bookings and details.</p>
+                            <button class="btn btn-primary">View History</button>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="booking-card">
+                            <h4>Current Booking</h4>
+                            <p>Check details of your active parking booking.</p>
+                            <button class="btn btn-primary">View Booking</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- dashboard -->
+<!-- <hr class="section-divider"> -->
+
+<footer class="bg-dark text-light py-4">
+    <div class="container">
+        <div class="row">
+            <!-- About Section -->
+            <div class="col-md-3">
+                <h5>Smart Park Assist</h5>
+                <p>Effortless parking with exceptional service. Reserve your spot and enjoy seamless parking.</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col-md-3">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-light text-decoration-none">Home</a></li>
+                    <li><a href="#" class="text-light text-decoration-none">About Us</a></li>
+                    <li><a href="#" class="text-light text-decoration-none">Services</a></li>
+                    <li><a href="#" class="text-light text-decoration-none">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="col-md-3">
+                <h5>Contact Us</h5>
+                <p>Email: support@quickpark.com</p>
+                <p>Phone: +91 92345 67890</p>
+            </div>
+
+            <!-- Social Media Links -->
+            <div class="col-md-3">
+                <h5>Follow Us</h5>
+                <div class="d-flex gap-3 mt-3">
+                    <a href="#" class="text-light fs-4"><i class="bi bi-twitter-x"></i></a>
+                    <a href="https://www.facebook.com/" class="text-light fs-4"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/" class="text-light fs-4"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="text-center mt-3">
+            <p class="mb-0">&copy; 2025 Smart Park Assist. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/SCRIPT/script.js"></script>
+
+<!-- User Modal -->
+<div class="modal1" id="userModal">
+    <div class="modal1-content">
+        <!-- Modal Header -->
+        <div class="modal1-header">
+            <h2>User Info</h2>
+            <span class="modal1-close">x</span>
+        </div>
+
+        <!-- Profile Section -->
+        <div class="modal1-profile-section">
+            <img id="profilePreview" src="default-profile.png" alt="Profile Picture">
+            <br>
+            <input type="file" id="profileUpload" accept="image/*">
+        </div>
+
+        <!-- Form Section -->
+        <div class="modal1-form-card">
+            <form>
+                <input type="hidden" name="userId">
+
+                <div class="modal1-form-group">
+                    <label>Date of Registration</label>
+                    <input type="date" name="dateOfRegister" required min="1900-01-01" max="2025-12-31">
+                </div>
+
+                <div class="modal1-form-group">
+                    <label>First Name</label>
+                    <input type="text" name="firstName" required placeholder="e.g Divakar">
+                </div>
+
+                <div class="modal1-form-group">
+                    <label>Last Name</label>
+                    <input type="text" name="lastName" required placeholder="e.g Sharma">
+                </div>
+
+                <div class="modal1-form-group">
+                    <label>Date of Birth</label>
+                    <input type="date" name="dob" required min="1900-01-01" max="2025-12-31">
+                </div>
+
+                <div class="modal1-form-group">
+                    <label>Email</label>
+                    <input type="email" name="email" required placeholder="e.g: divakar.sharma@example.com">
+                </div>
+
+                <div class="modal1-form-group">
+                    <label>Contact Number</label>
+                    <input type="tel" name="contactNumber" required pattern="\+91[6-9][0-9]{9}" placeholder="e.g: +919876543210">
+                </div>
+
+                <div class="modal1-form-group">
+                    <label>User Type</label>
+                    <select name="userType">
+                        <option value="VEHICLE_OWNER">Vehicle Owner</option>
+                        <option value="SLOT_OWNER">Slot Owner</option>
+                    </select>
+                </div>
+
+                <div class="modal1-form-group">
+                    <label>Address</label>
+                    <textarea name="address" rows="3" required placeholder="Street, City, State, ZIP"></textarea>
+                </div>
+
+                <div class="modal1-form-group">
+                    <label>Status</label>
+                    <select name="status">
+                        <option value="ACTIVE">Active</option>
+                        <option value="INACTIVE">Inactive</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+
+        <!-- Modal Footer -->
+        <div class="modal1-footer">
+            <button type="submit" class="btn modal1-btn-submit">Save</button>
+        </div>
+    </div>
+</div>
+
+<!-- Vehicle Modal -->
+<div class="modal2" id="vehicleModal">
+    <div class="modal2-content">
+        <!-- Modal Header -->
+        <div class="modal2-header">
+            <h2>Add Vehicle</h2>
+            <span class="modal2-close">x</span>
+        </div>
+
+        <!-- Profile Section -->
+        <div class="modal2-profile-section">
+            <img id="VehiclePreview" src="default-profile.png" alt="Vehicle Picture">
+            <br>
+            <input type="file" id="vehicleUpload" accept="image/*">
+        </div>
+
+        <!-- Form Section -->
+        <div class="modal2-form-card">
+            <form>
+                <input type="hidden" name="vehicleId">
+
+                <div class="modal2-form-group">
+                    <label>Registration Number</label>
+                    <input type="text" name="registrationNumber" required placeholder="e.g UP16DS4141">
+                </div>
+
+                <div class="modal2-form-group">
+                    <label>Vehicle Type</label>
+                    <select name="vehicleType">
+                        <option value="CAR">Car</option>
+                        <option value="BIKE">Bike</option>
+                        <option value="TRUCK">Truck</option>
+                        <option value="OTHER">Other</option>
+                    </select>
+                </div>
+
+                <div class="modal2-form-group">
+                    <label>Brand</label>
+                    <input type="text" name="brand" required placeholder="e.g. Toyota, Honda">
+                </div>
+
+                <div class="modal2-form-group">
+                    <label>Model</label>
+                    <input type="text" name="model" required placeholder="e.g. Fortuner, Civic">
+                </div>
+
+                <div class="modal2-form-group">
+                    <label>Registration Date</label>
+                    <input type="date" name="registrationDate" required min="1900-01-01" max="2025-12-31">
+                </div>
+
+                <div class="modal2-form-group">
+                    <label>Status</label>
+                    <select name="status">
+                        <option value="ACTIVE">Active</option>
+                        <option value="INACTIVE">Inactive</option>
+                    </select>
+                </div>
+
+                <div class="modal2-form-group">
+                    <label>Owner (User)</label>
+                    <select name="userObj" required>
+                        <option value="">Select User</option>
+                        <!-- Options should be dynamically added via JavaScript if needed -->
+                    </select>
+                </div>
+            </form>
+        </div>
+
+        <!-- Modal Footer -->
+        <div class="modal2-footer">
+            <button type="submit" class="btn modal2-btn-submit">Save</button>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
